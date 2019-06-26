@@ -1,5 +1,41 @@
+@font-face {
+  font-family: 'Amble Regular';
+  src: url('../font/amble/Amble-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amble Bold';
+  src: url('../font/amble/Amble-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   margin: 0;
+  font-family: "Amble Regular", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2em;
+  font-family: "Amble Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+h1::after,
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #000;
+  margin: 50px auto;
 }
 
 nav ul {
@@ -63,4 +99,76 @@ nav .back-drop {
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
   z-index: 3;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: #d56e4e;
+  color: white;
+}
+
+.bg {
+  background: url(../../images/macbook_pro_apple_iphone_laptop_smartphone_office_notebook_108418_1600x1200.jpg);
+  background-size: cover;
+}
+
+.header-content {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(231, 172, 108, 0.4), rgba(201, 123, 120, 0.4));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  max-width: 500px;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.sect {
+  height: 300px;
+  box-sizing: border-box;
+  background-position: center center;
+}
+
+.sect-bg-1 {
+  background-image: url(../../images/macbook_pro_apple_laptop_headphones_table_98893_1600x1200.jpg);
+}
+
+.sect-bg-2 {
+  background-image: url(../../images/laptop_macbook_iphone_apple_journal_glasses_113949_1400x1050.jpg);
+}
+
+.sect-bg-3 {
+  background-image: url(../../images/iphone_6_iphone_apple_100633_1280x960.jpg);
+}
+
+.sect-bg-4 {
+  background-image: url(../../images/apple_macbook_imac_109739_1280x960.jpg);
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  outline: none;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
 }
