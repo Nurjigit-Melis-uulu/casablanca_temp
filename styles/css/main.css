@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+}
+
+nav ul {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  margin: 0;
+  padding: 40px 0 0;
+  box-sizing: border-box;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: transform .8s;
+  z-index: 9;
+  transform: translateX(-100%);
+}
+
+nav ul.active {
+  transform: translateX(0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: #000;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  outline: none;
+}
+
+nav button .line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  display: block;
+  margin: 5px 0;
+}
+
+nav .back-drop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
