@@ -19,10 +19,7 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-size: 2em;
   font-family: "Amble Bold", sans-serif;
   text-transform: uppercase;
@@ -283,4 +280,24 @@ button.btn_2:hover {
 
 .we-are-hiring h2 {
   font-size: 1.5em;
+}
+
+.carousel {
+  width: 80%;
+}
+
+.carousel_items {
+  display: flex;
+}
+
+.item {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
 }
