@@ -140,22 +140,23 @@ section {
   height: 300px;
   box-sizing: border-box;
   background-position: center center;
+  background-blend-mode: darken;
 }
 
 .sect-bg-1 {
-  background-image: url(../../images/macbook_pro_apple_laptop_headphones_table_98893_1600x1200.jpg);
+  background-image: linear-gradient(0deg, #2c2722, #6e9fc9), url(../../images/macbook_pro_apple_laptop_headphones_table_98893_1600x1200.jpg);
 }
 
 .sect-bg-2 {
-  background-image: url(../../images/laptop_macbook_iphone_apple_journal_glasses_113949_1400x1050.jpg);
+  background-image: linear-gradient(0deg, #2c2722, #6e9fc9), url(../../images/laptop_macbook_iphone_apple_journal_glasses_113949_1400x1050.jpg);
 }
 
 .sect-bg-3 {
-  background-image: url(../../images/iphone_6_iphone_apple_100633_1280x960.jpg);
+  background-image: linear-gradient(0deg, #2c2722, #6e9fc9), url(../../images/iphone_6_iphone_apple_100633_1280x960.jpg);
 }
 
 .sect-bg-4 {
-  background-image: url(../../images/apple_macbook_imac_109739_1280x960.jpg);
+  background-image: linear-gradient(0deg, #2c2722, #6e9fc9), url(../../images/apple_macbook_imac_109739_1280x960.jpg);
 }
 
 .btn {
@@ -200,6 +201,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 1em;
+  margin: 0 0 60px;
 }
 
 img {
@@ -207,13 +209,12 @@ img {
   height: 100%;
 }
 
-button.btn_show_work {
-  margin: 40px 0 0;
+button.btn_2 {
   border-color: black;
   color: #000;
 }
 
-button.btn_show_work:hover {
+button.btn_2:hover {
   background: #000;
   color: white;
 }
@@ -236,4 +237,50 @@ button.btn_show_work:hover {
 
 .client:hover {
   opacity: 1;
+}
+
+.team {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 20px;
+  flex-flow: wrap;
+}
+
+.member {
+  margin: 10px;
+  width: 200px;
+  height: 220px;
+  position: relative;
+}
+
+.member-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid black;
+  opacity: 0;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.member:hover .member-info {
+  opacity: 1;
+}
+
+.we-are-hiring {
+  border: 2px solid black;
+  text-align: center;
+}
+
+.we-are-hiring h2 {
+  font-size: 1.5em;
 }
