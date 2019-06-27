@@ -224,12 +224,13 @@ button.btn_show_work:hover {
 
 .clients_grid {
   width: 80%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  grid-gap: 1em;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
 }
 
 .client {
+  width: 100px;
   opacity: .5;
 }
 
