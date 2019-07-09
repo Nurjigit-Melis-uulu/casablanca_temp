@@ -24,7 +24,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-size: 2em;
   font-family: 'big_johnregular', sans-serif;
   text-transform: uppercase;
@@ -290,4 +291,103 @@ article>p {
   filter: gray;
   -webkit-filter: grayscale(100%);
   transition: opacity, filter 0.6s;
+}
+
+
+.team {
+  width: 100%;
+  display: flex;
+  margin: 86px 0 0;
+  justify-content: space-between;
+}
+
+.member {
+  width: 270px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid black;
+  opacity: 0;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
+  text-transform: uppercase;
+  padding: 0 0 30px;
+}
+
+.member-info h4 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.member-info>a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 3px solid white;
+  text-align: center;
+  line-height: 28px;
+}
+
+.member-info>a:hover {
+  color: orange;
+  border-color: orange;
+}
+
+.member>img {
+  transition: transform .6s;
+}
+
+.member:hover .member-info {
+  opacity: 1;
+}
+
+.member:hover>img {
+  transform: scale(1.2);
+}
+
+.we-are-hiring {
+  border: 2px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  box-sizing: border-box;
+  padding: 57px 30px;
+}
+
+.we-are-hiring h2 {
+  font-size: 1.5em;
+  line-height: 36px;
+  margin: 32px 0 0;
+}
+
+.we-are-hiring .separator {
+  margin: 30px auto 0;
+}
+
+.we-are-hiring .btn {
+  width: 177px;
+  padding: 13px 0px;
+  margin: 32px auto 0;
 }
