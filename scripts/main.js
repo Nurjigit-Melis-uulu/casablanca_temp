@@ -13,6 +13,9 @@ let carouselButtons = document.querySelectorAll(".carousel_controls button");
 let carouselSlides = document.querySelector(".carousel_slides");
 let slideActiveNumber = 1;
 
+// Element of nav
+const anchors = document.querySelectorAll('a[href*="#"]');
+
 backDrop.addEventListener("click", function() {
   drawer.className = "";
   backDrop.style.display = "none";
@@ -71,6 +74,34 @@ carouselButtons.forEach(button => {
     }
   });
 });
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const blockID = anchor.getAttribute("href");
+
+    if (anchor.getAttribute("href") === "#") {
+      document.querySelector("body").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } else {
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    for (let link of links) {
+      if (link.getAttribute("href") === blockID) {
+        link.className = "active";
+      } else {
+        link.className = "";
+      }
+    }
+  });
+}
 
 function carouselBtnActivation(params) {
   for (let i = 0; i < carouselButtons.length; i++) {
