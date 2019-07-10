@@ -445,3 +445,28 @@ article>p {
   margin: 30px 0;
   font-family: "Amble Regular", sans-serif;
 }
+
+.carousel_controls button {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0 5px;
+  border-radius: 100%;
+  border: none;
+  background: rgb(168, 168, 168);
+  outline: none;
+  transition: transform .5s;
+}
+
+.carousel_controls button:hover {
+  transform: scale(1.5);
+}
+
+.carousel_controls button:active {
+  transform: scale(.9);
+  transition: transform .2s;
+}
+
+.carousel_controls button.active {
+  background: black;
+}

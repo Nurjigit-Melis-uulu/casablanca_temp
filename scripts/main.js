@@ -48,9 +48,7 @@ categories.forEach(category => {
 
 carouselButtons.forEach(button => {
   button.addEventListener("click", function() {
-    let direct = this.getAttribute("data-direction");
-
-    if (direct === "right") {
+    if (this.getAttribute("data-direction") === "right") {
       if (slideActiveNumber === 1) {
         slideActiveNumber++;
       } else {
@@ -66,8 +64,17 @@ carouselButtons.forEach(button => {
 
     if (slideActiveNumber === 1) {
       carouselSlides.style.transform = "translateX(0)";
+      carouselBtnActivation(0);
     } else {
       carouselSlides.style.transform = "translateX(-50%)";
+      carouselBtnActivation(1);
     }
   });
 });
+
+function carouselBtnActivation(params) {
+  for (let i = 0; i < carouselButtons.length; i++) {
+    carouselButtons[i].className = "";
+    carouselButtons[params].className = "active";
+  }
+}
