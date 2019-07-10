@@ -470,3 +470,87 @@ article>p {
 .carousel_controls button.active {
   background: black;
 }
+
+.our-location {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+}
+
+.location {
+  width: 40%;
+  background: #F2F2F2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location_icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location_icons i {
+  font-size: 1.4em;
+}
+
+.location h3,
+.location p {
+  margin: 0 0 .5em;
+}
+
+.form-box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 60px;
+  background: #E4E4E4;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+}
+
+form input {
+  background: transparent;
+  height: 40px;
+  font-style: italic;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: none;
+  border-bottom: 3px solid #B3B3B3;
+}
+
+.email {
+  width: calc(50% - 10px);
+  margin-left: 20px;
+}
+
+.name {
+  width: calc(50% - 10px)
+}
+
+.message {
+  width: 100%;
+}
+
+form button.send {
+  border-radius: 0;
+  padding: 10px 30px;
+  width: auto;
+  margin: 0;
+}
