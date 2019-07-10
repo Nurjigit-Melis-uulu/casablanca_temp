@@ -17,6 +17,10 @@ body {
   font-family: "Amble Regular", sans-serif;
 }
 
+a {
+  color: white;
+}
+
 .sect i {
   color: white;
   font-size: 2em;
@@ -335,7 +339,6 @@ article>p {
 
 .member-info>a {
   display: block;
-  color: white;
   text-decoration: none;
   border-radius: 100%;
   width: 28px;
@@ -553,4 +556,14 @@ form button.send {
   padding: 10px 30px;
   width: auto;
   margin: 0;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background: #222222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
