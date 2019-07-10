@@ -21,6 +21,10 @@ a {
   color: white;
 }
 
+a:hover {
+  color: orange;
+}
+
 .sect i {
   color: white;
   font-size: 2em;
@@ -83,6 +87,7 @@ nav button {
   top: 20px;
   left: 20px;
   outline: none;
+  z-index: 3;
 }
 
 nav button .line {
@@ -480,6 +485,10 @@ article>p {
   min-height: 400px;
 }
 
+.our-location a {
+  color: #000;
+}
+
 .location {
   width: 40%;
   background: #F2F2F2;
@@ -532,6 +541,7 @@ form input {
   background: transparent;
   height: 40px;
   font-style: italic;
+  font-weight: bold;
   box-sizing: border-box;
   padding: 6px 10px;
   border: none;
@@ -566,4 +576,45 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .our-location {
+    flex-flow: column;
+  }
+
+  .location {
+    width: 100%;
+  }
+
+  .form-box {
+    width: 100%;
+    min-height: 300px;
+    align-items: stretch;
+  }
+
+  form {
+    height: inherit;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-box {
+    padding: 50px 10px 20px;
+  }
+}
+
+@media (max-width: 1168px) {
+  article p {
+    margin: 0 20px;
+  }
+
+  .btn {
+    width: 250px;
+    font-size: 1.4em;
+  }
+
+  .sect .btn {
+    width: 200px;
+  }
 }
