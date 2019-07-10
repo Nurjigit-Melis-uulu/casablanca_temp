@@ -4,9 +4,14 @@ let backDrop = document.querySelector(".back-drop");
 let drawer = document.querySelector("#drawer");
 let boll = false;
 
-// Element of work page
+// Elements of work page
 let categories = document.querySelectorAll(".work-categories button");
 let works = document.querySelectorAll(".work");
+
+// Elements of carousel
+let carouselButtons = document.querySelectorAll(".carousel_controls button");
+let carouselSlides = document.querySelector(".carousel_slides");
+let slideActiveNumber = 1;
 
 backDrop.addEventListener("click", function() {
   drawer.className = "";
@@ -38,5 +43,31 @@ categories.forEach(category => {
         work.style.display = "block";
       }
     });
+  });
+});
+
+carouselButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    let direct = this.getAttribute("data-direction");
+
+    if (direct === "right") {
+      if (slideActiveNumber === 1) {
+        slideActiveNumber++;
+      } else {
+        slideActiveNumber = 1;
+      }
+    } else {
+      if (slideActiveNumber === 2) {
+        slideActiveNumber--;
+      } else {
+        slideActiveNumber = 2;
+      }
+    }
+
+    if (slideActiveNumber === 1) {
+      carouselSlides.style.transform = "translateX(0)";
+    } else {
+      carouselSlides.style.transform = "translateX(-50%)";
+    }
   });
 });

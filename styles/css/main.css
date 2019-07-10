@@ -398,7 +398,14 @@ article>p {
 
 .carousel {
   width: 100%;
+  overflow: hidden;
   margin-top: 75px;
+}
+
+.carousel_slides {
+  width: 2340px;
+  display: flex;
+  transition: transform 1s;
 }
 
 .slide {
