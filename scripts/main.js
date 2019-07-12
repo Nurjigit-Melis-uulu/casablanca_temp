@@ -1,7 +1,9 @@
 // Elements of navigation
+const anchors = document.querySelectorAll('a[href*="#"]');
 let menuButton = document.querySelector("#menu-button");
 let backDrop = document.querySelector(".back-drop");
 let drawer = document.querySelector("#drawer");
+let strelka = document.querySelector(".strelka");
 let boll = false;
 
 // Elements of work page
@@ -13,22 +15,24 @@ let carouselButtons = document.querySelectorAll(".carousel_controls button");
 let carouselSlides = document.querySelector(".carousel_slides");
 let slideActiveNumber = 1;
 
-// Element of nav
-const anchors = document.querySelectorAll('a[href*="#"]');
-
 backDrop.addEventListener("click", function() {
   drawer.className = "";
   backDrop.style.display = "none";
+  strelka.style.display = "none";
 });
 
 menuButton.addEventListener("click", function() {
   boll = !boll;
 
+  console.log(drawer.childNodes);
+
   if (boll) {
+    strelka.style.display = "block";
     drawer.className = "active";
     backDrop.style.display = "block";
   } else {
     drawer.className = "";
+    strelka.style.display = "none";
   }
 });
 
