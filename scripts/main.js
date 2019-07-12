@@ -84,6 +84,10 @@ for (let anchor of anchors) {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
 
+    drawer.className = "";
+    backDrop.style.display = "none";
+    strelka.style.display = "none";
+
     const blockID = anchor.getAttribute("href");
 
     if (anchor.getAttribute("href") === "#") {
