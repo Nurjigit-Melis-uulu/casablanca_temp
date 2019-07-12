@@ -566,7 +566,7 @@ article>p {
 .location_icons {
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .location_icons i {
@@ -651,6 +651,7 @@ footer {
   .location {
     padding: 40px 0;
     width: 100%;
+    text-align: center;
   }
 
   .form-box {
