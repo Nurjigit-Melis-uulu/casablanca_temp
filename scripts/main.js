@@ -38,12 +38,13 @@ categories.forEach(category => {
     this.className = "active";
 
     works.forEach(work => {
-      work.style.display = "none";
-      if (work.getAttribute("data-category") === category.value) {
-        work.style.display = "block";
+      if (work.className !== "work hidden") {
+        work.className = "work hidden";
       }
-      if (category.value === "all") {
-        work.style.display = "block";
+      if (work.getAttribute("data-category") === category.value) {
+        work.className = "work";
+      } else if (category.value === "all") {
+        work.className = "work";
       }
     });
   });
