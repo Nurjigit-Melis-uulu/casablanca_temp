@@ -258,7 +258,8 @@ article>p {
 }
 
 .btn {
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   border: 2px solid black;
   border-radius: 0;
   color: black;
@@ -681,6 +682,11 @@ footer {
   .form-box {
     padding: 50px 10px 20px;
   }
+
+  body .btn {
+    max-width: 200px;
+    font-size: 1.2em;
+  }
 }
 
 @media (max-width: 1168px) {
@@ -689,12 +695,12 @@ footer {
   }
 
   .btn {
-    width: 250px;
+    max-width: 250px;
     font-size: 1.4em;
   }
 
   .sect .btn {
-    width: 200px;
+    font-size: 1.4em;
   }
 
   .team {
