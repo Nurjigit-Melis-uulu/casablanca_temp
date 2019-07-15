@@ -75,6 +75,7 @@ nav .strelka {
   position: fixed;
   left: 30px;
   top: 50px;
+  z-index: 9;
 }
 
 nav ul.active {
