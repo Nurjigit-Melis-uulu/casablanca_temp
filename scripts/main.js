@@ -1,5 +1,5 @@
 // Elements of navigation
-const anchors = document.querySelectorAll('a[href*="#"]');
+const anchors = document.querySelectorAll('nav a[href*="#"]');
 let menuButton = document.querySelector("#menu-button");
 let backDrop = document.querySelector(".back-drop");
 let drawer = document.querySelector("#drawer");
