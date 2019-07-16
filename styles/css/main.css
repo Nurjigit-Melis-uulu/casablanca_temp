@@ -360,12 +360,18 @@ article>p {
   grid-gap: 30px;
 }
 
-.client:hover>img {
+.client {
+  margin-bottom: 20px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.client:hover a>img {
   opacity: 1;
   filter: none;
 }
 
-.client>img {
+.client a>img {
   opacity: 0.5;
   filter: gray;
   -webkit-filter: grayscale(100%);
