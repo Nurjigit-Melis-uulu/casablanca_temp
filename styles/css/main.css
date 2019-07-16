@@ -334,6 +334,7 @@ article>p {
     opacity: 0;
     width: 0px;
     height: 0px;
+    margin: 0;
   }
 }
 
