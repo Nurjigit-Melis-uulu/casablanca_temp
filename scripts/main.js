@@ -14,6 +14,7 @@ let works = document.querySelectorAll(".work");
 let carouselButtons = document.querySelectorAll(".carousel_controls button");
 let carouselSlides = document.querySelector(".carousel_slides");
 let carousel = document.querySelector(".carousel");
+let slideState = document.querySelector("#slide-state");
 let slideActiveNumber = 1;
 let carouselCount = 1;
 let carouselPos = 0;
@@ -103,6 +104,8 @@ carouselButtons.forEach(button => {
       carouselPos = 0;
       carouselSlides.style.transform = `translateX(${carouselPos}px)`;
     }
+
+    slideState.innerHTML = slideActiveNumber;
 
     // console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
   });
