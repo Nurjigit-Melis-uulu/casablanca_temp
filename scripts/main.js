@@ -18,8 +18,6 @@ let slideActiveNumber = 1;
 let carouselCount = 1;
 let carouselPos = 0;
 
-console.log();
-
 backDrop.addEventListener("click", function() {
   drawer.className = "";
   backDrop.style.display = "none";
