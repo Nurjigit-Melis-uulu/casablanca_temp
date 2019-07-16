@@ -28,8 +28,6 @@ backDrop.addEventListener("click", function() {
 menuButton.addEventListener("click", function() {
   boll = !boll;
 
-  console.log(drawer.childNodes);
-
   if (boll) {
     strelka.style.display = "block";
     drawer.className = "active";
@@ -90,12 +88,12 @@ carouselButtons.forEach(button => {
     ) {
       slideActiveNumber--;
       carouselPos -= carouselWidth;
-      carouselSlides.style.transform = `translateX(${carouselPos}px)`;
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
     }
 
     if (slideActiveNumber < 1) {
       slideActiveNumber = carouselCount;
-      carouselPos = carouselWidth;
+      carouselPos = 1600;
       carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
     }
 
@@ -107,7 +105,7 @@ carouselButtons.forEach(button => {
 
     slideState.innerHTML = slideActiveNumber;
 
-    // console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
+    console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
   });
 });
 
@@ -133,7 +131,7 @@ for (let anchor of anchors) {
       });
     }
 
-    for (let link of links) {
+    for (let link of anchors) {
       if (link.getAttribute("href") === blockID) {
         link.className = "active";
       } else {
