@@ -533,24 +533,23 @@ article>p {
 }
 
 .carousel_controls button {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 35px;
   padding: 0;
-  margin: 0 5px;
-  border-radius: 100%;
+  margin: 0 4px;
+  border-radius: 3px;
   border: none;
-  background: rgb(168, 168, 168);
+  background: rgb(200, 200, 200);
   outline: none;
-  transition: transform .5s;
 }
 
 .carousel_controls button:hover {
-  transform: scale(1.5);
+  background: rgb(65, 65, 65);
+  color: white;
 }
 
 .carousel_controls button:active {
-  transform: scale(.9);
-  transition: transform .2s;
+  background: rgb(195, 91, 22);
 }
 
 .carousel_controls button.active {
