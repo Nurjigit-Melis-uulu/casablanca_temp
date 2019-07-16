@@ -13,7 +13,12 @@ let works = document.querySelectorAll(".work");
 // Elements of carousel
 let carouselButtons = document.querySelectorAll(".carousel_controls button");
 let carouselSlides = document.querySelector(".carousel_slides");
+let carousel = document.querySelector(".carousel");
 let slideActiveNumber = 1;
+let carouselCount = 1;
+let carouselPos = 0;
+
+console.log();
 
 backDrop.addEventListener("click", function() {
   drawer.className = "";
@@ -56,27 +61,52 @@ categories.forEach(category => {
 
 carouselButtons.forEach(button => {
   button.addEventListener("click", function() {
-    if (this.getAttribute("data-direction") === "right") {
-      if (slideActiveNumber === 1) {
-        slideActiveNumber++;
-      } else {
-        slideActiveNumber = 1;
-      }
+    let carouselWidth = getComputedStyle(carousel).getPropertyValue(
+      "--carousel-width"
+    );
+
+    if (carouselWidth === " 960px") {
+      carouselWidth = 960;
+      carouselCount = 2;
+    } else if (carouselWidth === " 640px") {
+      carouselWidth = 640;
+      carouselCount = 3;
     } else {
-      if (slideActiveNumber === 2) {
-        slideActiveNumber--;
-      } else {
-        slideActiveNumber = 2;
-      }
+      carouselWidth = 320;
+      carouselCount = 6;
     }
 
-    if (slideActiveNumber === 1) {
-      carouselSlides.style.transform = "translateX(0)";
-      carouselBtnActivation(0);
-    } else {
-      carouselSlides.style.transform = "translateX(-50%)";
-      carouselBtnActivation(1);
+    if (
+      this.getAttribute("data-direction") === "right" &&
+      slideActiveNumber > 0 &&
+      slideActiveNumber < carouselCount + 1
+    ) {
+      slideActiveNumber++;
+      carouselPos += carouselWidth;
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
+    } else if (
+      this.getAttribute("data-direction") === "left" &&
+      slideActiveNumber <= carouselCount &&
+      slideActiveNumber > 0
+    ) {
+      slideActiveNumber--;
+      carouselPos -= carouselWidth;
+      carouselSlides.style.transform = `translateX(${carouselPos}px)`;
     }
+
+    if (slideActiveNumber < 1) {
+      slideActiveNumber = carouselCount;
+      carouselPos = carouselWidth;
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
+    }
+
+    if (slideActiveNumber > carouselCount) {
+      slideActiveNumber = 1;
+      carouselPos = 0;
+      carouselSlides.style.transform = `translateX(${carouselPos}px)`;
+    }
+
+    // console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
   });
 });
 
@@ -110,11 +140,4 @@ for (let anchor of anchors) {
       }
     }
   });
-}
-
-function carouselBtnActivation(params) {
-  for (let i = 0; i < carouselButtons.length; i++) {
-    carouselButtons[i].className = "";
-    carouselButtons[params].className = "active";
-  }
 }
