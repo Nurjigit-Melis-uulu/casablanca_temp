@@ -481,7 +481,7 @@ article>p {
 }
 
 .carousel_slides {
-  width: 200%;
+  width: 960px;
   display: flex;
   transition: transform 1s;
 }
