@@ -93,7 +93,7 @@ carouselButtons.forEach(button => {
 
     if (slideActiveNumber < 1) {
       slideActiveNumber = carouselCount;
-      carouselPos = 1600;
+      carouselPos = carouselWidth * (carouselCount - 1);
       carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
     }
 
