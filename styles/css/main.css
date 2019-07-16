@@ -272,10 +272,12 @@ article>p {
   font-size: 1.5em;
   padding: 12px 20px;
   font-weight: bold;
-  display: block;
   margin: 0 auto;
   background: transparent;
   transition: color, background .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
