@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+:root {
+  --carousel-width: 960px;
+}
+
 body {
   margin: 0;
   font-family: "Amble Regular", sans-serif;
@@ -471,9 +475,9 @@ article>p {
 }
 
 .carousel {
-  width: 100%;
+  width: var(--carousel-width);
   overflow: hidden;
-  margin-top: 75px;
+  margin: 75px auto 0;
 }
 
 .carousel_slides {
@@ -483,13 +487,13 @@ article>p {
 }
 
 .slide {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .item {
-  min-width: 300px;
+  min-width: 290px;
   width: 30%;
   text-align: center;
   display: flex;
@@ -519,6 +523,10 @@ article>p {
   font-size: 1.5em;
   margin: 30px 0;
   font-family: "Amble Regular", sans-serif;
+}
+
+.carousel_controls {
+  margin: 30px 0 0;
 }
 
 .carousel_controls button {
@@ -645,6 +653,55 @@ footer {
   justify-content: center;
 }
 
+@media (max-width: 1168px) {
+  article p {
+    margin: 0 20px;
+  }
+
+  .btn {
+    max-width: 250px;
+    font-size: 1.4em;
+  }
+
+  .sect .btn {
+    font-size: 1.4em;
+  }
+
+  .team {
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+
+  .member {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --carousel-width: 640px;
+  }
+}
+
+@media (max-width: 750px) {
+  form div {
+    flex-flow: column;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  .email {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+
+  body h1 {
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 700px) {
   .our-location {
     flex-flow: column;
@@ -679,6 +736,12 @@ footer {
   }
 }
 
+@media (max-width: 640px) {
+  :root {
+    --carousel-width: 320px;
+  }
+}
+
 @media (max-width: 450px) {
   .form-box {
     padding: 50px 10px 20px;
@@ -688,70 +751,9 @@ footer {
     max-width: 200px;
     font-size: 1.2em;
   }
-}
-
-@media (max-width: 1168px) {
-  article p {
-    margin: 0 20px;
-  }
-
-  .btn {
-    max-width: 250px;
-    font-size: 1.4em;
-  }
-
-  .sect .btn {
-    font-size: 1.4em;
-  }
-
-  .team {
-    flex-flow: wrap;
-    justify-content: space-evenly;
-  }
-
-  .member {
-    margin: 5px;
-  }
 
   .item {
-    min-width: 100px;
-  }
-
-  .slide {
-    justify-content: center;
-  }
-
-  /* 
-  .carousel_slides {
-    width: 1340px;
-  } */
-}
-
-@media (max-width: 750px) {
-  .slide {
-    flex-flow: column;
-    align-items: center;
-  }
-
-  .item {
-    width: 320px;
-    margin: 0 0 30px;
-  }
-
-  form div {
-    flex-flow: column;
-  }
-
-  .name {
-    width: 100%;
-  }
-
-  .email {
-    width: 100%;
-    margin: 30px 0 0;
-  }
-
-  body h1 {
-    font-size: 2em;
+    min-width: 320px;
+    padding: 0;
   }
 }
