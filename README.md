@@ -2,6 +2,6 @@
 
 this is work on a layout template.
 
-deploy: https://stupefied-dijkstra-d6846e.netlify.com
+deploy: https://casablanca-nur.netlify.com
 
 have a nice day! =)
